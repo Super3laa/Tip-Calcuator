@@ -26,18 +26,8 @@ export default function App() {
     tipAmount: 0.00,
     Total: 0,
   })
-  useEffect(() => {
-    if (data.bill > 0 && data.people > 0) {
-      calculateAndDivide();
-    } else {
-      cleanResults();
-    }
-  }, [data.bill, data.people, data.tipPercent])
-  function tipButton(e, tip) {
-    e.preventDefault();
-    setData({ ...data, tipPercent: tip });
-  }
-  function calculateAndDivide() {
+  
+  const calculateAndDivide = ()=> {
     let Bill = parseFloat(data.bill);
     let tipAmountPerPerson = (Bill * (data.tipPercent / 100) / data.people);
     let TotalMoneyPerPerson = ((Bill / parseInt(data.people)) + tipAmountPerPerson);
@@ -47,13 +37,26 @@ export default function App() {
       Total: TotalMoneyPerPerson,
     })
   }
-  function cleanResults() {
+  const cleanResults = ()=> {
     setData({
       ...data,
       tipAmount: 0,
       Total: 0,
     })
   }
+  useEffect(() => {
+    if (data.bill > 0 && data.people > 0) {
+      calculateAndDivide();
+    } else {
+      cleanResults();
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [data.bill, data.people, data.tipPercent])
+  function tipButton(e, tip) {
+    e.preventDefault();
+    setData({ ...data, tipPercent: tip });
+  }
+ 
   function handleBillInput(e) {
     if (e.target.value < 0) {
       setBillValidateLabel("Bill Can't be less than 0")
@@ -173,7 +176,7 @@ export default function App() {
                   <button className="Button Reset" 
                   onClick={clean}
                   disabled={
-                    parseFloat(data.bill) != 0 || parseInt(data.people) != 0 || data.tipPercent != 0 ? 
+                    parseFloat(data.bill) !== 0 || parseInt(data.people) !== 0 || data.tipPercent !== 0 ? 
                     false:true
                     }>RESET</button>
                 </Col>
