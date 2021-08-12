@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Tip-Calculator/static/css/main.a2c992d7.chunk.css",
-    "main.js": "/Tip-Calculator/static/js/main.405882df.chunk.js",
-    "main.js.map": "/Tip-Calculator/static/js/main.405882df.chunk.js.map",
+    "main.js": "/Tip-Calculator/static/js/main.f8edcced.chunk.js",
+    "main.js.map": "/Tip-Calculator/static/js/main.f8edcced.chunk.js.map",
     "runtime-main.js": "/Tip-Calculator/static/js/runtime-main.02949fc8.js",
     "runtime-main.js.map": "/Tip-Calculator/static/js/runtime-main.02949fc8.js.map",
     "static/css/2.9082872e.chunk.css": "/Tip-Calculator/static/css/2.9082872e.chunk.css",
@@ -18,6 +18,6 @@
     "static/css/2.9082872e.chunk.css",
     "static/js/2.03435c79.chunk.js",
     "static/css/main.a2c992d7.chunk.css",
-    "static/js/main.405882df.chunk.js"
+    "static/js/main.f8edcced.chunk.js"
   ]
 }
