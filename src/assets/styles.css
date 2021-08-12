@@ -1,0 +1,170 @@
+#root {
+    display: flex;
+    height: fit-content;
+    background-color: hsl(185, 41%, 84%);
+    font-family: 'Space Mono', monospace;
+    min-height: 100vh;
+}
+
+.Container {
+    border-radius: 15px;
+    height: 100%;
+}
+
+.RowPrimary {
+    height: 100%;
+}
+
+.Container.App {
+    margin: auto;
+    width: auto;
+    background-color: white;
+    height: fit-content;
+    padding: 35px;
+}
+@media (min-width:1200px) {
+    .Container.App{
+        max-width: 960px !important;
+    }
+}
+.Container.Result {
+    background-color: hsl(183, 100%, 15%);
+    width: 100%;
+    padding: 40px 0;
+    display: grid;
+    grid-auto-rows: 1fr 1fr 2fr;
+}
+
+.ResultsHeader {
+    font-weight: 700;
+    font-size:0.8rem ;
+    color: white;
+}
+
+.ResultsSubTitle {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: hsla(180, 37%, 97%, 0.719);
+}
+.logo{
+    margin: 0;
+    color: #14494d;
+    font-weight: 700;
+}
+.logoCol{
+    padding: 5rem 0 2.5rem 0rem;
+    text-align: center;
+}
+.ResultsPrice {
+    font-size: 2.6rem;
+    color: hsl(172, 67%, 45%);
+    font-weight: 700;
+    text-align: right;
+}
+
+.Button {
+    border: 0;
+    transition: 1s;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 5px;
+}
+.Button.Group{
+    width: 100%;
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    font-size: 24px;
+    padding: 8px 5px;
+    margin: 8px 0px;
+    font-weight: 700;
+
+}
+.Button.Group.Inverted{
+    background-color: hsl(172, 67%, 45%) ;
+    color: hsl(183, 100%, 15%) ;   
+}
+.Button.Group:hover{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+.Button.Reset {
+    margin-right: 45px;
+    margin-left: 45px;
+    width: -webkit-fill-available;
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+    background-color: hsl(172, 67%, 45%);
+    padding: 6px;
+}
+.Button.Reset:hover {
+    background-color: hsl(185, 41%, 84%);
+}
+.Button.Reset:disabled{
+    background-color: #116b6f;
+    color:#055c60
+}
+.FormLayout{
+    display: grid;
+    grid-auto-rows: 1fr 2fr 1fr;
+    height: 100%;
+    align-items: center;
+}
+
+.addOnInputSympol{
+    background-color: transparent !important;
+    border: 0 !important;
+    color: hsl(185, 41%, 84%) !important;
+    font-size: 24px !important;
+    position: absolute;
+    z-index: 999;
+    height: 100%;
+}
+.addOnInputIcon{
+    font-size: 20px;
+    color: hsl(185, 41%, 84%);
+}
+.FormInput{
+    background-color: hsl(189, 41%, 97%) !important;
+    color: hsl(183, 100%, 15%)!important;
+    border-radius: 6px !important;
+    padding: 0;
+    cursor: pointer;
+    font-size: 24px !important;
+    text-align: right;
+    font-weight: 700 !important;
+    padding: 1.5px 10px;
+    transition: 0s;
+    outline: 0;
+    margin: 4px 0px;
+    border-width: 2px 2px 2px 2px !important;
+    border-color: hsl(189, 41%, 97%) !important ;
+}
+.FormInput.Invalid:focus{
+    border-color: #de1e30 !important;
+}
+.FormInput:focus{
+    outline : 0 !important;
+    box-shadow: none !important;
+    border-width: 2px 2px 2px 2px !important;
+    border-color: #52d1a7 !important;
+}
+.inputLabel{
+    color: hsl(186, 14%, 43%);
+    padding: 5px 0;
+    font-weight: 700;
+    font-size: 14px;
+}
+.inputLabel.Validate{
+    float: right;
+    color: #de1e30;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

@@ -1,17 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {
+  Container,
+  Row,
+  Col
+}from "reactstrap";
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Container>
+      <Row>
+        <Col className="logoCol">
+        <p className="logo">S P L I</p>
+        <p className="logo">T T E R</p>
+        </Col>
+      </Row>
+      <Row>
+      <App />
+      </Row>
+    </Container>
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
